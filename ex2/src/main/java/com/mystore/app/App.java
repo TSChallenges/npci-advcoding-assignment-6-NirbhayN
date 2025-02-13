@@ -1,5 +1,6 @@
 package com.mystore.app;
 
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -19,5 +20,6 @@ public class App {
         p2.setId(2);
         p2.setName("Bucket");        
         System.out.println(p2);
+
     }  
 }

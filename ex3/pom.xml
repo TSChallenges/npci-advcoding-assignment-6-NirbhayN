@@ -9,7 +9,20 @@
   <url>https://maven.apache.org</url>
 
   <dependencies>
-    <!-- ADD YOUR Dependencies HERE -->
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>6.2.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>6.2.2</version>
+    </dependency>
+
   </dependencies>
 
   <properties>
@@ -28,6 +41,8 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
@@ -44,7 +59,14 @@
           </archive>
         </configuration>
       </plugin>
-
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-exec-plugin</artifactId>
+      <version>1.6.0</version>
+      <configuration>
+        <mainClass>com.mystore.app.App</mainClass>
+      </configuration>
+    </plugin>
       <!-- Shade Plugin to bundle dependencies into a single JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
